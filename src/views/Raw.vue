@@ -2,8 +2,10 @@
   <div class="home">
     <!-- <h2>RAW</h2> -->
 
-
-    <pre class="code"><code>{{ status_data }}</code></pre>
+    <div v-if="status_loading" class="loading loading-lg"></div>
+    <div v-else>
+        <pre class="code"><code>{{ status_data }}</code></pre>
+    </div>
 
 
 
@@ -36,7 +38,7 @@ async function load_statuses(){
        
     return { load_statuses }
   },
-  computed: mapGetters(['status_data']),
+  computed: mapGetters(['status_loading', 'status_data']),
   methods: mapActions(['fetchStatus', 'fetchAndReturnStatus']),
     created() {
       //this.makeNotification('Posts page has visited')

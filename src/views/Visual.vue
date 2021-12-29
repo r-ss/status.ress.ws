@@ -2,8 +2,10 @@
   <div class="home">
     <!-- <h2>Visual</h2> -->
 
-
-    <div id="scheme" v-html="nomnoml_final"></div>  
+    <div v-if="status_loading" class="loading loading-lg"></div>
+    <div v-else>
+        <div id="scheme" v-html="nomnoml_final"></div>
+    </div>
 
   </div>
 </template>

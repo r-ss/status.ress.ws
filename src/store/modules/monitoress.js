@@ -4,9 +4,9 @@ import axios from 'axios'
 
 import {universalFetch, universalPost, universalUpload} from '@/utils/rest'
 
-// const apihost = process.env.VUE_APP_API_HOST
+const apihost = process.env.VUE_APP_API_HOST
 
-const apihost = 'https://statusapi.ress.ws/all'
+// const apihost = 'https://status.ress.ws/api/all'
 
 export default {
     //inject:['$apiHost'],
@@ -17,7 +17,7 @@ export default {
     actions: {
         async fetchStatus({ dispatch, commit }) {
             commit('startStatusLoading')
-            let url = apihost
+            let url = apihost + '/all'
             let data = await universalFetch( dispatch, commit, url ).then((data => {
                 // temporary handling expired token sceario here - because no skill to intercept and check token in axios request
                 console.log('data', JSON.stringify(data)) 
@@ -30,7 +30,7 @@ export default {
             commit('startStatusLoading')
 
             return new Promise((resolve, reject) => {
-                axios({ url: apihost, method: 'GET'}).then(resp => {
+                axios({ url: apihost + '/all', method: 'GET'}).then(resp => {
                     // console.log(resp.data.client)
                     commit('stopStatusLoading')
                     // commit('set_status_data', resp.data)
