@@ -50,9 +50,11 @@ const nomnoml_template = `
 [  🎀 selenium_playground  ]
 [ 🐳 docker @ foldwrap ]
 [ colortag 🦀 foldwrap_api | status ]
+[ colortag 📝 ak_notes | status ]
 [ <database> mongodb ]
 [ <database> 🚅 redis @ foldwrap ]
 [ 🦀 foldwrap_api ] <--> [ <database> mongodb ]
+[ 📝 ak_notes ] <--> [ <database> mongodb ]
 
 [ 📟 eland_keenetic ]
 [ colortag 🐣 eland_tinkerboard | status ]
@@ -70,6 +72,7 @@ const nomnoml_template = `
 [  📦 foldwrap  ] - [  🎀 selenium_playground  ]
 [ 🐳 docker @ foldwrap ] - [ 🚅 redis @ foldwrap ]
 [ 🐳 docker @ foldwrap ] - [ 🦀 foldwrap_api ]
+[ 🐳 docker @ foldwrap ] - [ 📝 ak_notes ]
 
 
 [ 📟 grani_microtic ] -- [ 🪐 basscadet ]
