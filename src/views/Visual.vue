@@ -47,7 +47,7 @@ const nomnoml_template = `
 
 [  📦 foldwrap | digitalocean vps ] 
 [  👀 monitoress (this) ]
-[  🎀 selenium_playground  ]
+[ colortag 🎀 selenium_playground | status ]
 [ 🐳 docker @ foldwrap ]
 [ colortag 🦀 foldwrap_api | status ]
 [ colortag 📝 ak_notes | status ]
@@ -139,7 +139,24 @@ export default {
                 color = '<redcell>'
             }
 
-            let info = probe.status + ' ; ' + probe.success_count + ' / ' + probe.fail_count + ' (' + probe.success_ratio + ') ; type: ' + probe.type + ' ; ' + probe.lastcheck
+            var extrafields = ''
+            if (Object.keys(probe.extra).length > 0) {
+                // for (var item of probe.extra.entries()) {
+                //   extrafields = item + ' ; '
+                // }
+                extrafields = ' | '
+                for (var key in probe.extra){
+                  // console.log( key, dict[key] );
+                  extrafields = extrafields + key + ': ' + probe.extra[key] + ' ; '
+                }
+
+                extrafields = extrafields.substring(0, extrafields.length - 2); // remove last 2 chars - ;
+            }
+
+            console.log(extrafields)
+
+            let info = probe.status + ' ; ' + probe.success_count + ' / ' + probe.fail_count + ' (' + probe.success_ratio + ') ; type: ' + probe.type + ' ; ' + probe.lastcheck + extrafields
+            
             let newrow = row.replace('status', info)
             newrow = newrow.replace('colortag', color)
             nomnoml_code.value = nomnoml_code.value.replace(row, newrow)
