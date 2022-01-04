@@ -153,8 +153,6 @@ export default {
                 extrafields = extrafields.substring(0, extrafields.length - 2); // remove last 2 chars - ;
             }
 
-            console.log(extrafields)
-
             let info = probe.status + ' ; ' + probe.success_count + ' / ' + probe.fail_count + ' (' + probe.success_ratio + ') ; type: ' + probe.type + ' ; ' + probe.lastcheck + extrafields
             
             let newrow = row.replace('status', info)
