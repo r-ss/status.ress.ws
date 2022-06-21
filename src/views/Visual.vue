@@ -98,7 +98,6 @@ const nomnoml_template = `
 
 
 `
-// [ colortag 🍅 pomodoress | status ]
 
 export default {
   name: 'visual',
@@ -121,11 +120,10 @@ export default {
     function construct_status_cell(match){
       let status_data = store.getters.status_data
       let row = match[0]
-      let colortag = match[1]
+      // let colortag = match[1]
       let name = match[2]
-      let status = match[3]
+      // let status = match[3]
       for (var probe of status_data.probes) {
-        // console.log('probe', probe)
         if(probe.name == name){
 
             if (probe.success_count == null){
@@ -141,9 +139,6 @@ export default {
 
             var extrafields = ''
             if (Object.keys(probe.extra).length > 0) {
-                // for (var item of probe.extra.entries()) {
-                //   extrafields = item + ' ; '
-                // }
                 extrafields = ' | '
                 for (var key in probe.extra){
                   // console.log( key, dict[key] );

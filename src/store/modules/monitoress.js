@@ -9,7 +9,6 @@ const apihost = process.env.VUE_APP_API_HOST
 // const apihost = 'https://status.ress.ws/api/all'
 
 export default {
-    //inject:['$apiHost'],
     state: {
         loading: false,
         status_data: null
@@ -19,7 +18,6 @@ export default {
             commit('startStatusLoading')
             let url = apihost + '/all'
             let data = await universalFetch( dispatch, commit, url ).then((data => {
-                // temporary handling expired token sceario here - because no skill to intercept and check token in axios request
                 console.log('data', JSON.stringify(data)) 
                 commit('stopStatusLoading')
                 commit('set_status_data', data)
@@ -31,22 +29,11 @@ export default {
 
             return new Promise((resolve, reject) => {
                 axios({ url: apihost + '/all', method: 'GET'}).then(resp => {
-                    // console.log(resp.data.client)
                     commit('stopStatusLoading')
-                    // commit('set_status_data', resp.data)
                     resolve(resp.data)
                     
                 })
             })
-
-            // let url = apihost
-            // let data = await universalFetch( dispatch, commit, url ).then((data => {
-            //     // temporary handling expired token sceario here - because no skill to intercept and check token in axios request
-            //     // console.log('data', data) 
-            //     commit('stopStatusLoading')
-            //     commit('set_status_data', data)
-            //     return data
-            // }))
             
         }
     },
