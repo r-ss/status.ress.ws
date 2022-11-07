@@ -47,6 +47,7 @@ const nomnoml_template = `
 
 [  📦 foldwrap | digitalocean vps ] 
 [  👀 monitoress (this) ]
+[ colortag 🕸 ress.ws | status ]
 [ colortag 🎀 selenium_playground | status ]
 [ 🐳 docker @ foldwrap ]
 [ colortag 🦀 foldwrap_api | status ]
@@ -70,6 +71,7 @@ const nomnoml_template = `
 [  📦 foldwrap  ] - [  👀 monitoress (this) ]
 [  📦 foldwrap  ] - [ 🐳 docker @ foldwrap ]
 [  📦 foldwrap  ] - [  🎀 selenium_playground  ]
+[  📦 foldwrap  ] - [ 🕸 ress.ws ]
 [ 🐳 docker @ foldwrap ] - [ 🚅 redis @ foldwrap ]
 [ 🐳 docker @ foldwrap ] - [ 🦀 foldwrap_api ]
 [ 🐳 docker @ foldwrap ] - [ 📝 ak_notes ]
