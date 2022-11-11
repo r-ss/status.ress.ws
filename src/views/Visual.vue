@@ -47,34 +47,36 @@ const nomnoml_template = `
 
 [  📦 foldwrap | digitalocean vps ] 
 [  👀 monitoress (this) ]
-[ colortag 🕸 ress.ws | status ]
-[ colortag 🎀 selenium_playground | status ]
+[ colortag 🎀 torrent_downloader | status ]
 [ 🐳 docker @ foldwrap ]
 [ colortag 🦀 foldwrap_api | status ]
-[ colortag 📝 ak_notes | status ]
+[ colortag ⚡️ energram_api | status ]
+
+
 [ <database> mongodb ]
 [ <database> 🚅 redis @ foldwrap ]
 [ 🦀 foldwrap_api ] <--> [ <database> mongodb ]
-[ 📝 ak_notes ] <--> [ <database> mongodb ]
 
-[ 📟 eland_keenetic ]
-[ colortag 🐣 eland_tinkerboard | status ]
 [ colortag 📟 grani_microtic | status ]
 [ 🪐 basscadet | intel i5, ubuntu ]
 
 [ 🐳 docker @ basscadet ]
 [ <database> 🚅 redis @ basscadet ]
 [ 🍅 pomodoress ]
-[ colortag 💾 ress_backup_manager | status ]
 
 
-[  📦 foldwrap  ] - [  👀 monitoress (this) ]
+
 [  📦 foldwrap  ] - [ 🐳 docker @ foldwrap ]
-[  📦 foldwrap  ] - [  🎀 selenium_playground  ]
-[  📦 foldwrap  ] - [ 🕸 ress.ws ]
+[  📦 foldwrap  ] - [ 🐢 tmux @ foldwrap ]
+
 [ 🐳 docker @ foldwrap ] - [ 🚅 redis @ foldwrap ]
 [ 🐳 docker @ foldwrap ] - [ 🦀 foldwrap_api ]
-[ 🐳 docker @ foldwrap ] - [ 📝 ak_notes ]
+[ 🐳 docker @ foldwrap ] - [ misc | 🕊️ ress_notification_service | 📈 energram-charts]
+
+[ 🐢 tmux @ foldwrap ] - [ 🎀 torrent_downloader ]
+[ 🐢 tmux @ foldwrap ] - [ 👀 monitoress (this) ]
+[ 🐢 tmux @ foldwrap ] - [ 🧘 existence_bot ]
+[ 🐢 tmux @ foldwrap ] - [ ⚡️ energram_api ]
 
 
 [ 📟 grani_microtic ] -- [ 🪐 basscadet ]
@@ -87,15 +89,14 @@ const nomnoml_template = `
 
 
 [ 💾 ress_backup_manager ] -- [  🧑🏻‍💻 macbook  ]
-[ 💾 ress_backup_manager ] --> [ 📟 eland_keenetic ]
-[ 📟 eland_keenetic ] --> eland [ 🐣 eland_tinkerboard ]
 
 [ 💾 ress_backup_manager ] <--> [ 🚅 redis @ basscadet ]
 
+[ ⚡️ energram_api ] <--> [ 🚅 redis @ foldwrap ]
+[ ⚡️ energram_api ] <--> [ sqlite.db ]
+[  🎀 torrent_downloader  ] <--> [ 🚅 redis @ foldwrap ]
 
-[ 🧘 existence_bot  ] heroku <--> [ <database> atlas ]
-
-[<package> misc: | 🐔 rashka-zone | 🎵 spotify_api_playground | ☁️ notificationservice.ress.ws | ☁️ ress_morning_message ]
+[ 🧘 existence_bot ] <--> [ <database> mongodb ]
 
 
 
