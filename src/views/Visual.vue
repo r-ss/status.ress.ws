@@ -50,7 +50,7 @@ const nomnoml_template = `
 [ colortag 🎀 torrent_downloader | status ]
 [ 🐳 docker @ foldwrap ]
 [ colortag 🦀 foldwrap_api | status ]
-[ colortag ⚡️ energram_api | status ]
+[ colortag ⚡️ energram_api_new | status ]
 
 
 [ <database> mongodb ]
@@ -76,7 +76,7 @@ const nomnoml_template = `
 [ 🐢 tmux @ foldwrap ] - [ 🎀 torrent_downloader ]
 [ 🐢 tmux @ foldwrap ] - [ 👀 monitoress (this) ]
 [ 🐢 tmux @ foldwrap ] - [ 🧘 existence_bot ]
-[ 🐢 tmux @ foldwrap ] - [ ⚡️ energram_api ]
+[ 🐢 tmux @ foldwrap ] - [ ⚡️ energram_api_new ]
 
 
 [ 📟 grani_microtic ] -- [ 🪐 basscadet ]
@@ -92,8 +92,7 @@ const nomnoml_template = `
 
 [ 💾 ress_backup_manager ] <--> [ 🚅 redis @ basscadet ]
 
-[ ⚡️ energram_api ] <--> [ 🚅 redis @ foldwrap ]
-[ ⚡️ energram_api ] <--> [ sqlite.db ]
+
 [  🎀 torrent_downloader  ] <--> [ 🚅 redis @ foldwrap ]
 
 [ 🧘 existence_bot ] <--> [ <database> mongodb ]
