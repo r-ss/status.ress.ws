@@ -40,7 +40,7 @@ const nomnoml_template = `
 #.greencell: fill=#ccffbb title=center,bold body=left
 #.redcell: fill=#ff9988 title=center,bold body=left
 
-[  🧑🏻‍💻 macbook  ] -- [ 🥸 VPN @ firestarter | digitalocean vps ]
+[  🧑🏻‍💻 macbook  ] -- [ 🥸 VPN @ origami | digitalocean vps ]
 
 
 [ colortag 🧩 validators | status ]
@@ -50,8 +50,9 @@ const nomnoml_template = `
 [ colortag 🎀 torrent_downloader | status ]
 [ 🐳 docker @ foldwrap ]
 [ colortag 🦀 foldwrap_api | status ]
-[ colortag ⚡️ energram_api_new | status ]
+[ colortag ⚡️ energram_api | status ]
 
+[ colortag ⚡️ energram_deploytool | status ]
 
 [ <database> mongodb ]
 [ <database> 🚅 redis @ foldwrap ]
@@ -76,7 +77,6 @@ const nomnoml_template = `
 [ 🐢 tmux @ foldwrap ] - [ 🎀 torrent_downloader ]
 [ 🐢 tmux @ foldwrap ] - [ 👀 monitoress (this) ]
 [ 🐢 tmux @ foldwrap ] - [ 🧘 existence_bot ]
-[ 🐢 tmux @ foldwrap ] - [ ⚡️ energram_api_new ]
 
 
 [ 📟 grani_microtic ] -- [ 🪐 basscadet ]
@@ -96,6 +96,18 @@ const nomnoml_template = `
 [  🎀 torrent_downloader  ] <--> [ 🚅 redis @ foldwrap ]
 
 [ 🧘 existence_bot ] <--> [ <database> mongodb ]
+
+
+[  📦 energram  | digitalocean vps ]
+
+[ 🐳 docker @ energram ]
+[ 🐢 tmux @ energram ]
+
+[  📦 energram  ] - [ 🐳 docker @ energram ]
+[  📦 energram  ] - [ 🐢 tmux @ energram ]
+[ 🐢 tmux @ energram ] - [ ⚡️ energram_deploytool ]
+[ 🐳 docker @ energram ] - [ ⚡️ energram_api ]
+[ ⚡️ energram_deploytool ] -> [ 🐳 docker @ energram ]
 
 
 
