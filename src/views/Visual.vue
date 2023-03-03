@@ -56,7 +56,7 @@ const nomnoml_template = `
 
 [ <database> mongodb ]
 [ <database> 🚅 redis @ foldwrap ]
-[ 🦀 foldwrap_api ] <--> [ <database> mongodb ]
+[ 🦀 foldwrap_api ] <--> [ <database> mongodb foldwrap ]
 
 [ colortag 📟 grani_microtic | status ]
 [ 🪐 basscadet | intel i5, ubuntu ]
@@ -72,7 +72,7 @@ const nomnoml_template = `
 
 [ 🐳 docker @ foldwrap ] - [ 🚅 redis @ foldwrap ]
 [ 🐳 docker @ foldwrap ] - [ 🦀 foldwrap_api ]
-[ 🐳 docker @ foldwrap ] - [ misc | 🕊️ ress_notification_service | 📈 energram-charts]
+[ 🐳 docker @ foldwrap ] - [ misc | 🕊️ ress_notification_service ]
 
 [ 🐢 tmux @ foldwrap ] - [ 🎀 torrent_downloader ]
 [ 🐢 tmux @ foldwrap ] - [ 👀 monitoress (this) ]
