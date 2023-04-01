@@ -54,6 +54,15 @@ const nomnoml_template = `
 
 [ colortag ⚡️ energram_deploytool | status ]
 
+[ colortag ⭐️ ursadate_api | status ]
+[ colortag ⭐️ ursadate_deploytool | status ]
+
+
+
+[ colortag 🎆 fresscards_api | status ]
+[ colortag 🎆 fresscards_deploytool | status ]
+
+
 [ <database> mongodb ]
 [ <database> 🚅 redis @ foldwrap ]
 [ 🦀 foldwrap_api ] <--> [ <database> mongodb foldwrap ]
@@ -73,6 +82,13 @@ const nomnoml_template = `
 [ 🐳 docker @ foldwrap ] - [ 🚅 redis @ foldwrap ]
 [ 🐳 docker @ foldwrap ] - [ 🦀 foldwrap_api ]
 [ 🐳 docker @ foldwrap ] - [ misc | 🕊️ ress_notification_service ]
+
+[ 🐳 docker @ foldwrap ] - [ ⭐️ ursadate_api ]
+[ 🐢 tmux @ foldwrap ] - [ ⭐️ ursadate_deploytool ]
+[ ⭐️ ursadate_api ] <--> [ 🚅 redis @ foldwrap ]
+
+[ 🐳 docker @ foldwrap ] - [ 🎆 fresscards_api ]
+[ 🐢 tmux @ foldwrap ] - [ 🎆 fresscards_deploytool ]
 
 [ 🐢 tmux @ foldwrap ] - [ 🎀 torrent_downloader ]
 [ 🐢 tmux @ foldwrap ] - [ 👀 monitoress (this) ]
