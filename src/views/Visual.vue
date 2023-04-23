@@ -40,14 +40,11 @@ const nomnoml_template = `
 #.greencell: fill=#ccffbb title=center,bold body=left
 #.redcell: fill=#ff9988 title=center,bold body=left
 
-[  🧑🏻‍💻 macbook  ] -- [ 🥸 VPN @ origami | digitalocean vps ]
-
 
 [ colortag 🧩 validators | status ]
 
 [  📦 foldwrap | digitalocean vps ] 
 [  👀 monitoress (this) ]
-[ colortag 🎀 torrent_downloader | status ]
 [ 🐳 docker @ foldwrap ]
 [ colortag 🦀 foldwrap_api | status ]
 [ colortag ⚡️ energram_api | status ]
@@ -72,8 +69,6 @@ const nomnoml_template = `
 
 [ 🐳 docker @ basscadet ]
 [ <database> 🚅 redis @ basscadet ]
-[ 🍅 pomodoress ]
-
 
 
 [  📦 foldwrap  ] - [ 🐳 docker @ foldwrap ]
@@ -86,30 +81,21 @@ const nomnoml_template = `
 [ 🐳 docker @ foldwrap ] - [ ⭐️ ursadate_api ]
 [ 🐢 tmux @ foldwrap ] - [ ⭐️ ursadate_deploytool ]
 [ ⭐️ ursadate_api ] <--> [ 🚅 redis @ foldwrap ]
+[ 🎆 fresscards_api ] <--> [ 🚅 redis @ foldwrap ]
 
 [ 🐳 docker @ foldwrap ] - [ 🎆 fresscards_api ]
 [ 🐢 tmux @ foldwrap ] - [ 🎆 fresscards_deploytool ]
 
-[ 🐢 tmux @ foldwrap ] - [ 🎀 torrent_downloader ]
 [ 🐢 tmux @ foldwrap ] - [ 👀 monitoress (this) ]
 [ 🐢 tmux @ foldwrap ] - [ 🧘 existence_bot ]
 
 
 [ 📟 grani_microtic ] -- [ 🪐 basscadet ]
-[ 🪐 basscadet ] - [ 💾 ress_backup_manager ]
-[ 🪐 basscadet ] - [ 🍅 pomodoress ]
 [ 🪐 basscadet ] - [ 🐳 docker @ basscadet ]
 [ 🐳 docker @ basscadet ] - [ 🚅 redis @ basscadet ]
 [ 🧩 validators ] - [ 🪐 basscadet ]
 [ 👀 monitoress (this) ] <--> [ 🚅 redis @ foldwrap ]
 
-
-[ 💾 ress_backup_manager ] -- [  🧑🏻‍💻 macbook  ]
-
-[ 💾 ress_backup_manager ] <--> [ 🚅 redis @ basscadet ]
-
-
-[  🎀 torrent_downloader  ] <--> [ 🚅 redis @ foldwrap ]
 
 [ 🧘 existence_bot ] <--> [ <database> mongodb ]
 
