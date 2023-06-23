@@ -54,6 +54,8 @@ const nomnoml_template = `
 [ colortag ⭐️ ursadate_api | status ]
 [ colortag ⭐️ ursadate_deploytool | status ]
 
+[ colortag 👯‍♀️ dankomedia_api | status ]
+
 
 
 [ colortag 🎆 fresscards_api | status ]
@@ -85,6 +87,8 @@ const nomnoml_template = `
 
 [ 🐳 docker @ foldwrap ] - [ 🎆 fresscards_api ]
 [ 🐢 tmux @ foldwrap ] - [ 🎆 fresscards_deploytool ]
+
+[ 🐳 docker @ foldwrap ] - [ 👯‍♀️ dankomedia_api ]
 
 [ 🐢 tmux @ foldwrap ] - [ 👀 monitoress (this) ]
 [ 🐢 tmux @ foldwrap ] - [ 🧘 existence_bot ]
