@@ -100,6 +100,8 @@ const nomnoml_template = `
 [ 🧩 validators ] - [ 🪐 basscadet ]
 [ 👀 monitoress (this) ] <--> [ 🚅 redis @ foldwrap ]
 
+[ 🪐 basscadet ] - [ 🐢 tmux @ basscadet ]
+[ 🐢 tmux @ basscadet ] - [ 🤬 smalltalk ]
 
 [ 🧘 existence_bot ] <--> [ <database> mongodb ]
 
