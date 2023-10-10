@@ -43,10 +43,16 @@ const nomnoml_template = `
 
 [ colortag 🧩 validators | status ]
 
+[  📦 newfold | digitalocean vps ] 
+
 [  📦 foldwrap | digitalocean vps ] 
 [  👀 monitoress (this) ]
 [ 🐳 docker @ foldwrap ]
-[ colortag 🦀 foldwrap_api | status ]
+
+[ colortag 🦀 foldwrap | status ]
+[ colortag 🦀 figma_service | status ]
+[ colortag 🦀 foldwrap_deploytool | status ]
+
 [ colortag ⚡️ energram_api | status ]
 
 [ colortag ⚡️ energram_deploytool | status ]
@@ -62,9 +68,6 @@ const nomnoml_template = `
 [ colortag 🎆 fresscards_deploytool | status ]
 
 
-[ <database> mongodb ]
-[ <database> 🚅 redis @ foldwrap ]
-[ 🦀 foldwrap_api ] <--> [ <database> mongodb foldwrap ]
 
 [ colortag 📟 grani_microtic | status ]
 [ 🪐 basscadet | intel i5, ubuntu ]
@@ -72,18 +75,17 @@ const nomnoml_template = `
 [ 🐳 docker @ basscadet ]
 [ <database> 🚅 redis @ basscadet ]
 
+[  📦 newfold  ] - [ 🦀 foldwrap ]
+[  📦 newfold  ] - [ 🦀 figma_service ]
+[  📦 newfold  ] - [ 🦀 foldwrap_deploytool ]
 
 [  📦 foldwrap  ] - [ 🐳 docker @ foldwrap ]
 [  📦 foldwrap  ] - [ 🐢 tmux @ foldwrap ]
 
-[ 🐳 docker @ foldwrap ] - [ 🚅 redis @ foldwrap ]
-[ 🐳 docker @ foldwrap ] - [ 🦀 foldwrap_api ]
 [ 🐳 docker @ foldwrap ] - [ misc | 🕊️ ress_notification_service ]
 
 [ 🐳 docker @ foldwrap ] - [ ⭐️ ursadate_api ]
 [ 🐢 tmux @ foldwrap ] - [ ⭐️ ursadate_deploytool ]
-[ ⭐️ ursadate_api ] <--> [ 🚅 redis @ foldwrap ]
-[ 🎆 fresscards_api ] <--> [ 🚅 redis @ foldwrap ]
 
 [ 🐳 docker @ foldwrap ] - [ 🎆 fresscards_api ]
 [ 🐢 tmux @ foldwrap ] - [ 🎆 fresscards_deploytool ]
@@ -91,20 +93,15 @@ const nomnoml_template = `
 [ 🐳 docker @ foldwrap ] - [ 👯‍♀️ dankomedia_api ]
 
 [ 🐢 tmux @ foldwrap ] - [ 👀 monitoress (this) ]
-[ 🐢 tmux @ foldwrap ] - [ 🧘 existence_bot ]
 
 
 [ 📟 grani_microtic ] -- [ 🪐 basscadet ]
 [ 🪐 basscadet ] - [ 🐳 docker @ basscadet ]
 [ 🐳 docker @ basscadet ] - [ 🚅 redis @ basscadet ]
 [ 🧩 validators ] - [ 🪐 basscadet ]
-[ 👀 monitoress (this) ] <--> [ 🚅 redis @ foldwrap ]
 
 [ 🪐 basscadet ] - [ 🐢 tmux @ basscadet ]
 [ 🐢 tmux @ basscadet ] - [ 🤬 smalltalk ]
-
-[ 🧘 existence_bot ] <--> [ <database> mongodb ]
-
 
 [  📦 energram  | digitalocean vps ]
 
