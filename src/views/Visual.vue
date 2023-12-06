@@ -41,67 +41,57 @@ const nomnoml_template = `
 #.redcell: fill=#ff9988 title=center,bold body=left
 
 
+
+// GRANI
+
 [ colortag 🧩 validators | status ]
+[ colortag 📟 grani_microtic | status ]
+[ 🪐 basscadet | intel i5, ubuntu ]
+[ 📟 grani_microtic ] -- [ 🪐 basscadet ]
+[ 🪐 basscadet ] - [ 🐳 docker @ basscadet ]
+[ 🧩 validators ] - [ 🪐 basscadet ]
 
-[  📦 newfold | digitalocean vps ] 
 
+// FOLDWRAP DROPLET
+
+[  📦 foldwrap  ] - [ 🐳 docker @ foldwrap ]
+[  📦 foldwrap  ] - [ 🐢 tmux @ foldwrap ]
+
+[ colortag ⭐️ ursadate_api | status ]
+
+[ colortag 🎆 fresscards_api | status ]
+[ 🐳 docker @ foldwrap ] - [ ⭐️ ursadate_api ]
+[ 🐳 docker @ foldwrap ] - [ 🎆 fresscards_api ]
+[ 🐢 tmux @ foldwrap ] - [ 👀 monitoress (this) ]
 [  📦 foldwrap | digitalocean vps ] 
 [  👀 monitoress (this) ]
 [ 🐳 docker @ foldwrap ]
+[ 🐳 docker @ foldwrap ] - [ misc | 🕊️ ress_notification_service ]
+
+
+
+// NEWFOLD DROPLET
+
+[  📦 newfold | digitalocean vps ] 
 
 [ colortag 🦀 foldwrap | status ]
 [ colortag 🦀 figma_service | status ]
 [ colortag 🦀 foldwrap_deploytool | status ]
 
+[  📦 newfold  ] - [ 🐳 docker @ newfold ]
+
+[ 🐳 docker @ newfold ] - [ 🤬 ress_smalltalk ]
+[ 🐳 docker @ newfold ] - [ 🦀 foldwrap ]
+[ 🐳 docker @ newfold ] - [ 🦀 figma_service ]
+[ 🐳 docker @ newfold ] - [ 🦀 foldwrap_deploytool ]
+
+
+
+
+// ENERGRAM DROPLET
+
 [ colortag ⚡️ energram_api | status ]
-
 [ colortag ⚡️ energram_deploytool | status ]
-
-[ colortag ⭐️ ursadate_api | status ]
-[ colortag ⭐️ ursadate_deploytool | status ]
-
-[ colortag 👯‍♀️ dankomedia_api | status ]
-
-
-
-[ colortag 🎆 fresscards_api | status ]
-[ colortag 🎆 fresscards_deploytool | status ]
-
-
-
-[ colortag 📟 grani_microtic | status ]
-[ 🪐 basscadet | intel i5, ubuntu ]
-
-[ 🐳 docker @ basscadet ]
-[ <database> 🚅 redis @ basscadet ]
-
-[  📦 newfold  ] - [ 🦀 foldwrap ]
-[  📦 newfold  ] - [ 🦀 figma_service ]
-[  📦 newfold  ] - [ 🦀 foldwrap_deploytool ]
-
-[  📦 foldwrap  ] - [ 🐳 docker @ foldwrap ]
-[  📦 foldwrap  ] - [ 🐢 tmux @ foldwrap ]
-
-[ 🐳 docker @ foldwrap ] - [ misc | 🕊️ ress_notification_service ]
-
-[ 🐳 docker @ foldwrap ] - [ ⭐️ ursadate_api ]
-[ 🐢 tmux @ foldwrap ] - [ ⭐️ ursadate_deploytool ]
-
-[ 🐳 docker @ foldwrap ] - [ 🎆 fresscards_api ]
-[ 🐢 tmux @ foldwrap ] - [ 🎆 fresscards_deploytool ]
-
-[ 🐳 docker @ foldwrap ] - [ 👯‍♀️ dankomedia_api ]
-
-[ 🐢 tmux @ foldwrap ] - [ 👀 monitoress (this) ]
-
-
-[ 📟 grani_microtic ] -- [ 🪐 basscadet ]
-[ 🪐 basscadet ] - [ 🐳 docker @ basscadet ]
-[ 🐳 docker @ basscadet ] - [ 🚅 redis @ basscadet ]
-[ 🧩 validators ] - [ 🪐 basscadet ]
-
-[ 🪐 basscadet ] - [ 🐢 tmux @ basscadet ]
-[ 🐢 tmux @ basscadet ] - [ 🤬 smalltalk ]
 
 [  📦 energram  | digitalocean vps ]
 
