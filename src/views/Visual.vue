@@ -52,24 +52,6 @@ const nomnoml_template = `
 [ 🧩 validators ] - [ 🪐 basscadet ]
 
 
-// FOLDWRAP DROPLET
-
-[  📦 foldwrap  ] - [ 🐳 docker @ foldwrap ]
-[  📦 foldwrap  ] - [ 🐢 tmux @ foldwrap ]
-
-[ colortag ⭐️ ursadate_api | status ]
-
-[ colortag 🎆 fresscards_api | status ]
-[ 🐳 docker @ foldwrap ] - [ ⭐️ ursadate_api ]
-[ 🐳 docker @ foldwrap ] - [ 🎆 fresscards_api ]
-[ 🐢 tmux @ foldwrap ] - [ 👀 monitoress (this) ]
-[  📦 foldwrap | digitalocean vps ] 
-[  👀 monitoress (this) ]
-[ 🐳 docker @ foldwrap ]
-[ 🐳 docker @ foldwrap ] - [ misc | 🕊️ ress_notification_service ]
-
-
-
 // NEWFOLD DROPLET
 
 [  📦 newfold | digitalocean vps ] 
@@ -80,12 +62,15 @@ const nomnoml_template = `
 
 [  📦 newfold  ] - [ 🐳 docker @ newfold ]
 
+[  📦 newfold  ] - [ 🐢 tmux @ newfold ]
+
 [ 🐳 docker @ newfold ] - [ 🤬 ress_smalltalk ]
 [ 🐳 docker @ newfold ] - [ 🦀 foldwrap ]
 [ 🐳 docker @ newfold ] - [ 🦀 figma_service ]
-[ 🐳 docker @ newfold ] - [ 🦀 foldwrap_deploytool ]
 
-
+[ 🐢 tmux @ newfold ] - [ 👀 monitoress (this) ]
+[ 🐢 tmux @ newfold ] - [ 🕊️ ress_notification_service ]
+[ 🐢 tmux @ newfold ] - [ 🦀 foldwrap_deploytool  ]
 
 
 // ENERGRAM DROPLET
