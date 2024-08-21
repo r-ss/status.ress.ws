@@ -57,7 +57,6 @@ const nomnoml_template = `
 [  📦 newfold | digitalocean vps ] 
 
 [ colortag 🦀 foldwrap | status ]
-[ colortag 🦀 figma_service | status ]
 [ colortag 🦀 foldwrap_deploytool | status ]
 
 [  📦 newfold  ] - [ 🐳 docker @ newfold ]
@@ -66,30 +65,10 @@ const nomnoml_template = `
 
 [ 🐳 docker @ newfold ] - [ 🤬 ress_smalltalk ]
 [ 🐳 docker @ newfold ] - [ 🦀 foldwrap ]
-[ 🐳 docker @ newfold ] - [ 🦀 figma_service ]
 
 [ 🐢 tmux @ newfold ] - [ 👀 monitoress (this) ]
 [ 🐢 tmux @ newfold ] - [ 🕊️ ress_notification_service ]
 [ 🐢 tmux @ newfold ] - [ 🦀 foldwrap_deploytool  ]
-
-
-// ENERGRAM DROPLET
-
-[ colortag ⚡️ energram_api | status ]
-[ colortag ⚡️ energram_deploytool | status ]
-
-[  📦 energram  | digitalocean vps ]
-
-[ 🐳 docker @ energram ]
-[ 🐢 tmux @ energram ]
-
-[  📦 energram  ] - [ 🐳 docker @ energram ]
-[  📦 energram  ] - [ 🐢 tmux @ energram ]
-[ 🐢 tmux @ energram ] - [ ⚡️ energram_deploytool ]
-[ 🐳 docker @ energram ] - [ ⚡️ energram_api ]
-[ ⚡️ energram_deploytool ] -> [ 🐳 docker @ energram ]
-
-
 
 `
 
