@@ -52,23 +52,23 @@ const nomnoml_template = `
 [ 🧩 validators ] - [ 🪐 basscadet ]
 
 
-// NEWFOLD DROPLET
+// FOLDWRAP 
 
-[  📦 newfold | digitalocean vps ] 
+[  📦 foldwrap | hetzner vds ] 
 
 [ colortag 🦀 foldwrap | status ]
 [ colortag 🦀 foldwrap_deploytool | status ]
 
-[  📦 newfold  ] - [ 🐳 docker @ newfold ]
+[  📦 foldwrap  ] - [ 🐳 docker @ foldwrap ]
 
-[  📦 newfold  ] - [ 🐢 tmux @ newfold ]
+[  📦 foldwrap  ] - [ 🐢 tmux @ foldwrap ]
 
-[ 🐳 docker @ newfold ] - [ 🤬 ress_smalltalk ]
-[ 🐳 docker @ newfold ] - [ 🦀 foldwrap ]
+[ 🐳 docker @ foldwrap ] - [ 🤬 ress_smalltalk ]
+[ 🐳 docker @ foldwrap ] - [ 🦀 foldwrap ]
 
-[ 🐢 tmux @ newfold ] - [ 👀 monitoress (this) ]
-[ 🐢 tmux @ newfold ] - [ 🕊️ ress_notification_service ]
-[ 🐢 tmux @ newfold ] - [ 🦀 foldwrap_deploytool  ]
+[ 🐢 tmux @ foldwrap ] - [ 👀 monitoress (this) ]
+[ 🐢 tmux @ foldwrap ] - [ 🕊️ ress_notification_service ]
+[ 🐢 tmux @ foldwrap ] - [ 🦀 foldwrap_deploytool  ]
 
 `
 
